@@ -1,0 +1,29 @@
+@keyframes slide-30{0%{transform:translateY(0)}100%{transform:translateY(-30px)}}
+
+body {
+    background-color: #181818;
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
+}
+
+#header {
+    margin-left: 30px;
+    margin-top: 60px;
+}
+
+#title {
+    margin-bottom: 10px;
+}
+
+#subtitle {
+    margin: 0;
+}
+
+#logo {
+    animation: slide-30 2.5s cubic-bezier(.445,.05,.55,.95) infinite alternate;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10vh;
+    height: 20vh;
+}
