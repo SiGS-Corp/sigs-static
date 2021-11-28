@@ -1,0 +1,28 @@
+<svg width="250" height="250" viewBox="-3 -3 18 18"  xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="innerShadow" x1="0" y1="8" x2="2" y2="11" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-opacity="0" />
+			<stop offset="1" stop-opacity="0.6" />
+		</linearGradient>
+
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="dropShadow">
+			<feOffset result="offOut" in="SourceAlpha" dx=".5" dy=".5" />
+			<feGaussianBlur in="offOut" stdDeviation=".5"/>
+			<feComponentTransfer> <feFuncA type="linear" slope="0.6"/> </feComponentTransfer>
+			<feBlend in="SourceGraphic" mode="normal" />
+		</filter>
+	</defs>
+
+	
+	<g filter="url(#dropShadow)" transform="rotate(-15 6 6)">
+		<path d="M 12 0 L 10 2 L 10 10 L 12 12 Z" fill="#086BE5" class="sigs-right"/>
+		<path d="M 0 0 L 2 2 L 10 2 L 12 0 Z" fill="#BEBEBE" class="sigs-top"/>
+		<path d="M 0 0 L 2 2 L 2 10 L 0 12 Z" fill="#BEBEBE" class="sigs-left"/>
+		<path d="M 0 12 L 2 10 L 10 10 L 12 12 Z" fill="#FFF" class="sigs-bottom"/>
+
+		<path d="M 0 12 L 2 10 L 2 6 L 0 8 Z" fill="url(#innerShadow)"/>
+		<path d="M 0 12 L 2 10 L 2 6 L 0 8 Z" fill="url(#innerShadow)" transform="translate(0 -8) rotate(90 2 10)"/>
+		<path d="M 0 12 L 2 10 L 2 6 L 0 8 Z" fill="url(#innerShadow)" transform="translate(8 -8) rotate(180 2 10)"/>
+		<path d="M 0 12 L 2 10 L 2 6 L 0 8 Z" fill="url(#innerShadow)" transform="translate(12 0) scale(-1,1)"/>
+	</g>
+</svg>
